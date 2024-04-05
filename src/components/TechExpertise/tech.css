@@ -1,0 +1,89 @@
+.skils {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  color: #fff;
+  position: relative;
+}
+
+#skils #heading h1 {
+  color: #fff;
+  font-size: 40px;
+  text-align: center;
+}
+
+
+
+.skils-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90%;
+  border-radius: 2rem;
+  background-color: #000;
+  margin-bottom: 40px;
+  box-shadow: 0px 0px 20px #ee299e;
+  gap: 4rem 1rem;
+  padding: 50px 10px;
+
+}
+
+.skill__box {
+  width: 15%;
+  height: 178px;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
+  border-top: 1px solid #ee299e;
+  /* border-left: 1px solid #ee299e;
+  border-right: 1px solid #fff;*/
+  border-bottom: 1px solid #ee299e;
+
+
+}
+
+.skill__box img {
+  width: 80px;
+  display: block;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.skill__box p {
+  font-weight: 900;
+}
+
+/* ==================================== Responsive =========================== */
+@media (max-width:1020px) {
+
+
+  .skill__box {
+    width: 23%;
+    border: 2px solid #ee299e;
+
+  }
+
+}
+
+@media (max-width:756px) {
+  .skill__box {
+    width: 45%;
+  }
+
+  #skils #heading h1 {
+    font-size: 2rem;
+    text-align: left;
+    padding: 10px 30px;
+  }
+
+}
+@media (max-width:545px) {
+
+  .skill__box img {
+    width: 60px;
+  }
+}

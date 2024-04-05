@@ -1,0 +1,225 @@
+#hero {
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  background-color: #1a1a21;
+  overflow: hidden;
+  position: relative;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  padding: 0 5rem;
+  justify-content: start;
+}
+
+
+.btn__fixed {
+  padding: 10px 20px;
+  position: absolute;
+  left: 50px;
+  top: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  right: 1rem;
+  z-index: 9999 !important;
+}
+
+.btn__fixed a {
+  background-color: transparent;
+  border: 1px solid #ee299e;
+  padding: .8rem 2rem;
+  display: block;
+  background-color: #ee299e;
+
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  color: #ee299e;
+  box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px;
+  transition: all 300ms ease-in;
+  color: #fff;
+
+}
+
+.btn__fixed a:hover {
+  background-color: #000;
+  color: #fff;
+
+}
+
+.btn__fixed a i {
+  display: block;
+  margin-right: .4rem;
+  font-size: 1.4rem;
+}
+
+/* ============================= Hero Content ================================= */
+
+.typing-text {
+  background: linear-gradient(to right, #fff 40%, #ee299e 100%);
+  -webkit-background-clip: text;
+  width: 100%;
+  position: relative;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.2em;
+}
+
+#hero #ser-box {
+  display: block;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  margin-top: 50px;
+  padding: 50px;
+  color: #fff;
+}
+#hero #ser-box div {
+width: 80%;
+margin: 40px auto;
+background-color: #000;
+display: flex;
+align-items: center;
+height: 80px;
+padding: 40px;
+border-radius: 8px;
+box-shadow: 0px 0px 15px #ee299e;
+}
+#hero #ser-box div img {
+width: 50px;
+height: 50px;
+display: block;
+margin-right: 1rem;
+}
+#hero #ser-box div h2 {
+color: #fff;
+}
+
+#space {
+  position: absolute;
+  background: black;
+  width: 100vw;
+  height: 100%;
+  left: 0;
+  top: 80px;
+  overflow: hidden;
+}
+
+.particle,
+.particle::after {
+  position: absolute;
+  background: magenta;
+}
+
+.particle::after {
+  content: "";
+  right: 100vw;
+}
+
+.particle:nth-child(1) {
+  animation: move 15s infinite linear;
+  z-index: 3;
+}
+
+.particle:nth-child(2) {
+  animation: move 30s infinite linear;
+  z-index: 2;
+}
+
+.particle:nth-child(3) {
+  animation: move 60s infinite linear;
+  z-index: 1;
+}
+
+.particle:nth-child(1),
+.particle:nth-child(1)::after {
+  box-shadow: var(--shadows1);
+  width: 2px;
+  height: 2px;
+}
+
+.particle:nth-child(2),
+.particle:nth-child(2)::after {
+  box-shadow: var(--shadows2);
+  width: 4px;
+  height: 4px;
+}
+
+.particle:nth-child(3),
+.particle:nth-child(3)::after {
+  box-shadow: var(--shadows3);
+  width: 5px;
+  height: 5px;
+}
+
+@keyframes move {
+  from {
+    transform: translateX(0vw);
+  }
+
+  to {
+    transform: translateX(100vw);
+  }
+}
+
+/* ==================================== Responsive =========================== */
+@media (max-width:1140px) {
+
+  #hero {
+    height: 100%;
+    flex-direction: column-reverse;
+
+  }
+
+  #space {
+    width: 100%;
+  }
+
+  .typing-text {
+    margin-top: 10px;
+    padding-left: 1rem;
+  }
+
+  #hero img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .btn__fixed {
+    position: static;
+    margin: 80px auto;
+  }
+
+  #hero {
+    padding: 0rem;
+  }
+}
+@media (max-width:768px) {
+  #hero #ser-box {
+    display: block;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    margin-top: 70px;
+    padding: 10px;
+    color: #fff;
+  }
+  #hero #ser-box div {
+  width: 100%;
+  margin: 20px auto;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  height: 80px;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 15px #ee299e;
+  }
+}
+@media (max-width:450px) {
+  .typing-text {
+
+    font-size: 1.6em;
+  }
+}

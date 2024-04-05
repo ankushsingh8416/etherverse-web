@@ -1,0 +1,213 @@
+header {
+  width: 100%;
+  height: 80px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  z-index: 999999 !important;
+  background-color: #000;
+  overflow: hidden;
+}
+
+header .container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .container .logo img {
+  width: 150px;
+}
+
+header .container .link ul {
+  display: flex;
+}
+
+header .container .link ul li {
+  cursor: pointer;
+  margin-right: 3rem;
+}
+
+header .container .link ul li a {
+  color: #dfdfdf;
+  position: relative;
+  transition: all 300ms ease-in-out;
+  text-decoration: none;
+}
+
+header .container .link ul li a:hover {
+  color: #fff;
+}
+
+ nav ul li a.active {
+  color: #fff;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 2px;
+  width: 0%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background-color: #eee;
+  transition: all 300ms ease-in-out;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav ul li a.active::after {
+  width: 100%;
+}
+
+header .container .button a {
+  background-color: #ee299e;
+  color: #eee;
+  border: 1px solid #dddd;
+  padding: 8px 1.6rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  transition: all 300ms ease-in-out;
+
+}
+
+header .container .button a span {
+  animation: chat 1s ease infinite;
+  display: inline-block;
+  padding-right: .4rem;
+
+}
+
+@keyframes chat {
+  30% {
+    transform: scale(1.2);
+  }
+
+  40%,
+  60% {
+    transform: rotate(-20deg) scale(1.2);
+  }
+
+  50% {
+    transform: rotate(20deg) scale(1.2);
+  }
+
+  70% {
+    transform: rotate(0deg) scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+header .container .button a:hover {
+
+  color: #ee299e;
+
+  background-color: #eeee;
+
+
+}
+
+header .container .button a span {
+  font-size: 1.2rem;
+}
+
+#menu__bar-icon {
+  display: none;
+}
+
+#cross {
+  display: none;
+}
+
+header .container .link ul .button {
+  display: none;
+}
+
+/* =============================  Responsive ================================= */
+@media (max-width:1140px) {
+
+  header .container .link ul {
+    display: block;
+    background-color: #000;
+    position: fixed;
+    left: -100%;
+    width:300px;
+    height: 100vh;
+    top: 0;
+    overflow: hidden;
+    padding: 4rem 2rem;
+    box-shadow: 0px 0px 2px #eee;
+    transition: all 300ms ease-in-out;
+  }
+  header .container .link ul.active{
+left: 0;
+
+  }
+
+  #cross {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    display: block;
+  }
+
+  #cross i {
+    color: #fff;
+  }
+  header .container .button{
+    display: none;
+  }
+  header .container .link ul .button {
+    display: block;
+    bottom: 100px;
+    width: 80%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+  }
+
+  header .container .link ul .button a {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    text-align: center;
+
+  }
+
+  header .container .link ul .button a span {
+    font-size: 1.2rem;
+
+  }
+
+  header .container .link ul li {
+    margin-bottom: 1.2rem;
+  }
+
+  #menu__bar-icon {
+    display: block;
+  }
+
+  #menu__bar-icon i {
+    color: #fff;
+    font-size: 2.2rem;
+  }
+
+}
+
+@media (max-width:756px) {
+  #menu__bar-icon i {
+    font-size: 1.4rem;
+
+  }
+
+  header .container .logo img {
+    width: 120px;
+  }
+}

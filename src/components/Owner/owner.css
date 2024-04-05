@@ -1,0 +1,117 @@
+#owner {
+  width: 60%;
+  height: 400px;
+  border: 1px solid #eee;
+  box-shadow: 0 0 18px #ee299e;
+  backdrop-filter: blur(30px);
+  margin: auto;
+  margin-top: 100px;
+  display: flex;
+  gap: 2rem;
+  padding: 40px;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.right-effects {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 500px;
+  height: 300px;
+  border-radius: 50%;
+  background: #900c5a;
+  -webkit-filter: blur(100px);
+  filter: blur(100px);
+  opacity: 0.26;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.left-effects {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 500px;
+  height: 300px;
+  border-radius: 50%;
+  background: #900c5a;
+  -webkit-filter: blur(100px);
+  filter: blur(100px);
+  opacity: 0.26;
+  pointer-events: none;
+  z-index: 1;
+}
+.owner_box {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.owner_img {
+  width: 350px;
+  height: 350px;
+}
+.owner_img img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.owner_content {
+  color: #eee;
+}
+.owner_content h1 {
+  background: linear-gradient(to right, #ee299e 10%, #fff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+}
+.owner_content p {
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+.owner_content ul {
+  display: flex;
+  padding: 20px 0;
+}
+.owner_content ul li a {
+  margin-right: 1.2rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ee299e;
+  border-radius: 5px;
+}
+.owner_content ul li a i {
+  color: #fff;
+  font-size: 1.6rem;
+}
+
+@media (max-width: 1000px) {
+  #owner {
+    flex-direction: column;
+    height: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  #owner {
+    width: 90%;
+    padding: 20px;
+    justify-content: start;
+    align-items: start;
+    height: 100%;
+  }
+
+  #owner .owner_img {
+    width: 100%;
+    height: 100%;
+  }
+  #owner .owner_content {
+    text-align: left;
+  }
+}

@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: #000;
+}
+
+/* ============================= Custom CSS ================================ */
+.container {
+  width: 90%;
+  margin: 0px auto;
+}
+
+section {
+  width: 100%;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --shadows1: 5px 5px white;
+  --shadows2: 5px 5px white;
+  --shadows3: 5px 5px white;
+}
+
+/* #heading h1::after {
+  content: "";
+  height: 4px;
+  width: 50px;
+  background-color: #ee299e;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 8px;
+
+} */
+
+#heading h1::before {
+  content: "";
+  height: 4px;
+  width: 100px;
+  background-color: #ee299e;
+  position: absolute;
+  top: 100%;
+  
+}
+
+
+::after,
+::before {
+  box-sizing: border-box;
+}
